@@ -1,12 +1,17 @@
 .question-wrapper {
-    padding-top: 70px;
+    padding-top: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     .question-number {
         color: #ccc;
-        margin-left: 15px;
+        margin-top: 5rem;
+        margin-left: 5rem;
     }
+}
+
+app-quiestion {
+    padding: 2rem;
 }
 
 .buttons {
