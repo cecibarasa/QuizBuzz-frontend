@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class="row ">
+    <div class=" col-md-4">
+        <h1>Sign Up</h1>
+        <img src="https://image.freepik.com/free-vector/happy-freelancer-with-computer-home-young-man-sitting-armchair-using-laptop-chatting-online-smiling-vector-illustration-distance-work-online-learning-freelance_74855-8401.jpg" alt="" style="width: 400px;"
+            class="img-fluid">
+    </div>
+    <div class="auth-action-container-body col-md-4" id="col">
+        <div>
+            <input type="text" placeholder="Name" [formControl]="name" />
+        </div>
+        <div>
+            <input type="text" placeholder="Username" [formControl]="username" />
+        </div>
+        <div>
+            <input type="email" placeholder="Email" [formControl]="email" />
+        </div>
+        <div>
+            <input type="password" placeholder="Password" [formControl]="password" />
+        </div>
+        <div class="submit-button-container">
+            <button class="submit-button" (click)="register()">Sign Up</button>
+        </div>
+
+        <div class="link-to-register">Already Registered? <a [routerLink]="['/auth/login']">Log In</a></div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class="row">
+    <div class="col-md-4">
+        <img src="https://image.freepik.com/free-vector/happy-freelancer-with-computer-home-young-man-sitting-armchair-using-laptop-chatting-online-smiling-vector-illustration-distance-work-online-learning-freelance_74855-8401.jpg" alt="" style="width: 400px;"
+            class="img-fluid">
+    </div>
+
+    <div class="col-md-3">
+        <h5 class="text-center text-success mt-5">CONGRATULATIONS!! You finished the test, here is the results.
+        </h5>
+        <!-- <h4 class="text-center">Your test results will be sent via Email.</h4> -->
+        <div *ngIf='results!=null'>
+            <!-- <h5>{{results.quiztaker_set.score}}</h5> -->
+            <div class="card question-wrapper">
+                <h3>{{results.quiz}}</h3>
+                <h5>{{results.score}}</h5>
+                <p *ngIf='results.quiztaker_set.completed'>Status <span class="badge badge-success">Completed</span></p>
+                <p *ngIf='results.quiztaker_set.completed !=true'>Status <span class="badge badge-warning">Not Completed</span></p>
+                <p>Total Questions <span class="badge badge-info">{{results.question_set.length}}</span></p>
+                <p>Score <span class="badge badge-success">{{results.quiztaker_set.score}}</span></p>
+
+            </div>
+        </div>
+    </div>
+</div>

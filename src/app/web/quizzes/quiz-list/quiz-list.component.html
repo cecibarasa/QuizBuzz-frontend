@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<div *ngIf="quizzes != null">
+    <div class="row">
+        <h2 style="text-align: center; color: black;">All Quizzes</h2>
+        <br>
+        <br>
+        <div *ngFor="let quiz of quizzes" class="quiz-item col-md-3">
+            <div class="quiz-image">
+                <img src="{{quiz.image}}" alt=" " width="55em " />
+            </div>
+            <div>
+                <div>
+                    <h2>{{quiz.name}}</h2>
+                </div>
+                <div>
+                    <p>{{quiz.description}}</p>
+                </div>
+                <div class="actions ">
+                    <span>{{quiz.questions_count}} Questions</span>
+                    <a [routerLink]="[ '/quizzes', quiz.slug] ">
+                        <button class="start-quiz-button ">Start</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

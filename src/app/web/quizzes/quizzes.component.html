@@ -1,0 +1,12 @@
+<div>
+    <div class="navbar">
+        <div>
+            <h3>
+                QuizzBizz
+            </h3>
+        </div>
+        <button><a *ngIf="authService.loggedIn()" (click)="logout()">Logout</a></button>
+
+    </div>
+    <router-outlet></router-outlet>
+</div>
