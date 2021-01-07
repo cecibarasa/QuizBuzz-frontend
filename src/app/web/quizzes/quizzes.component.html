@@ -5,6 +5,7 @@
                 QuizzBizz
             </h3>
         </div>
+        <button><a *ngIf="authService.loggedIn()" (click)="quizzz()"> Quizes</a></button>
         <button><a *ngIf="authService.loggedIn()" (click)="logout()">Logout</a></button>
 
     </div>

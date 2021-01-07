@@ -22,6 +22,11 @@ export class QuizzesComponent implements OnInit {
     this.router.navigate(['auth/login'])
   }
 
+  quizzz(){
+    this.endpoints.quizzes();
+    this.router.navigate(['quizzes/all'])
+  }
+
   ngOnInit(): void {
     
 
